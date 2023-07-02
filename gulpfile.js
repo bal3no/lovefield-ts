@@ -1,4 +1,5 @@
 /**
+/**
  * Copyright 2016 The Lovefield Project Authors. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +27,7 @@ const nopt = require('nopt');
 const path = require('path');
 const Toposort = require('toposort-class');
 
-const DIST_DIR = path.join(__dirname, 'dist');
+const DIST_DIR = path.join(__dirname, 'dist/lovefield-ts');
 const DIST_FILE = path.join(DIST_DIR, 'lf.ts');
 const DIST_ES6_DIR = path.join(DIST_DIR, 'es6');
 const DIST_ES5_DIR = path.join(DIST_DIR, 'es5');
