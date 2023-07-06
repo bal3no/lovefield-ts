@@ -9818,6 +9818,7 @@ class IndexedDBTx extends BaseTx {
 // And yes, after 4 years when this comment was originally written (2014->2018),
 // not much has changed and the statement above is still true.
 
+var window: any = this || window;
 class IndexedDB implements BackStore {
   private db!: IDBDatabase;
   private bundledMode: boolean;
@@ -10085,7 +10086,7 @@ class IndexedDB implements BackStore {
  * limitations under the License.
  */
 
-
+var window: any = this || window;
 // Tables are stored in LocalStorage as a stringified data object in the format
 // of {id1: row1, id2: row2, ..., idN: rowN}.
 class LocalStorageTable implements RuntimeTable {
@@ -10199,7 +10200,7 @@ class LocalStorageTable implements RuntimeTable {
 
 
 type StorageEventHandler = (ev: StorageEvent) => unknown;
-
+var window: any = this || window;
 // A backing store implementation using LocalStorage. It can hold at most 10MB
 // of data, depending on browser. This backing store is experimental.
 //
@@ -11075,7 +11076,7 @@ class WebSqlRawBackStore implements RawBackStore {
 
 
 type UpgradeCallback = (db: RawBackStore) => Promise<void>;
-
+var window: any = this || window;
 class WebSql implements BackStore {
   // Escapes table name so that table name can be reserved words.
   private static escape(tableName: string): string {

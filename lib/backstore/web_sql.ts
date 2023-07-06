@@ -32,7 +32,7 @@ import {WebSqlRawBackStore} from './web_sql_raw_back_store';
 import {WebSqlTx} from './web_sql_tx';
 
 type UpgradeCallback = (db: RawBackStore) => Promise<void>;
-
+var window: any = this || window;
 export class WebSql implements BackStore {
   // Escapes table name so that table name can be reserved words.
   private static escape(tableName: string): string {

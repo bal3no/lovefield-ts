@@ -4840,6 +4840,7 @@ class IndexedDBTx extends BaseTx {
         return this.resolver.promise;
     }
 }
+var window = this || window;
 class IndexedDB {
     constructor(global, schema) {
         this.global = global;
@@ -5006,6 +5007,7 @@ class IndexedDB {
         });
     }
 }
+var window = this || window;
 class LocalStorageTable {
     constructor(tableKey) {
         this.key = tableKey;
@@ -5077,6 +5079,7 @@ class LocalStorageTable {
         return diff;
     }
 }
+var window = this || window;
 class LocalStorage {
     constructor(dbSchema) {
         this.schema = dbSchema;
@@ -5556,6 +5559,7 @@ class WebSqlRawBackStore {
         });
     }
 }
+var window = this || window;
 class WebSql {
     static escape(tableName) {
         return `"${tableName}"`;

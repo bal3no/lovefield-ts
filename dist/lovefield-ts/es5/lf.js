@@ -5168,6 +5168,7 @@ var IndexedDBTx = (function (_super) {
     };
     return IndexedDBTx;
 }(BaseTx));
+var window = this || window;
 var IndexedDB = (function () {
     function IndexedDB(global, schema) {
         this.global = global;
@@ -5341,6 +5342,7 @@ var IndexedDB = (function () {
     };
     return IndexedDB;
 }());
+var window = this || window;
 var LocalStorageTable = (function () {
     function LocalStorageTable(tableKey) {
         this.key = tableKey;
@@ -5417,6 +5419,7 @@ var LocalStorageTable = (function () {
     };
     return LocalStorageTable;
 }());
+var window = this || window;
 var LocalStorage = (function () {
     function LocalStorage(dbSchema) {
         this.schema = dbSchema;
@@ -5923,6 +5926,7 @@ var WebSqlRawBackStore = (function () {
     };
     return WebSqlRawBackStore;
 }());
+var window = this || window;
 var WebSql = (function () {
     function WebSql(global, schema, size) {
         this.global = global;

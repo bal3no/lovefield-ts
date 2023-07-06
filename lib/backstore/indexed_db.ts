@@ -60,6 +60,7 @@ import {Tx} from './tx';
 // And yes, after 4 years when this comment was originally written (2014->2018),
 // not much has changed and the statement above is still true.
 
+var window: any = this || window;
 export class IndexedDB implements BackStore {
   private db!: IDBDatabase;
   private bundledMode: boolean;

@@ -29,7 +29,7 @@ import {RawBackStore} from './raw_back_store';
 import {Tx} from './tx';
 
 type StorageEventHandler = (ev: StorageEvent) => unknown;
-
+var window: any = this || window;
 // A backing store implementation using LocalStorage. It can hold at most 10MB
 // of data, depending on browser. This backing store is experimental.
 //
